@@ -1,0 +1,16 @@
+link para download do git https://git-scm.com/
+
+Comandos git:
+1- git clone (url) --> serve para clonar um repositório do repositório remoto (github) para o local (máquina do usuario)
+
+2- git status --> esse comando serve para ver o status do repositório, se teve alguma alteração por exemplo
+
+3- git add . (ou -A) --> esse comano serve para adicionar os arquivos que foram modificados, indicando que eles devem ser considerados no controle de versão (sendo que esse comando so modifica o repositório local)
+
+4- git commit -m "mensagem" --> esse comando serve para dar um commit e adicionar uma mensagem a esse commit
+
+5- git push origin main --> esse comando serve para empurrar o commit para a nuvem (github) 
+
+6- cd "nome do diretório" --> entrar em um diretório
+
+7- cd .. sair de um diretório

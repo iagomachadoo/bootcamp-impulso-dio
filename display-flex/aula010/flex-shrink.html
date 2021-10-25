@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos | Flex Shrink</title>
+    <style>
+        p{
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        .flexContainer{
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+        }
+
+        .items{
+            background-color: orangered;
+            font-size: 1.5rem;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .flexShrink1{
+            flex-shrink: 1;
+        }
+
+        .flexShrink0{
+            flex-shrink: 0;
+        }
+
+        .flexGrow{
+            flex-grow: 1;
+        }
+
+        .flexShrink0EFlexBais{
+            flex-shrink: 0;
+            flex-basis: 100px;
+        }
+
+        .flexShrink2{
+            flex-shrink: 2;
+            flex-basis: 100px;
+        }
+
+        .flexShrink3{
+            flex-shrink: 3;
+            flex-basis: 100px;
+        }
+    </style>
+</head>
+<body>
+    <p>Flex shrink = 1 (padrão) e flex grow = 1</p>
+    <div class="flexContainer">
+        <div class="items flexShrink1 flexGrow">A</div>
+        <div class="items flexShrink1 flexGrow">B</div>
+        <div class="items flexShrink1 flexGrow">C</div>
+        <div class="items flexShrink1 flexGrow">D</div>
+        <div class="items flexShrink1 flexGrow">E</div>
+    </div>
+
+    <p>Flex shrink = 1 (padrão) e flex grow = 1 mas com tamanhos de texto diferentes</p>
+    <div class="flexContainer">
+        <div class="items flexShrink1 flexGrow">A</div>
+        <div class="items flexShrink1 flexGrow">B</div>
+        <div class="items flexShrink1 flexGrow">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+        <div class="items flexShrink1 flexGrow">D</div>
+        
+    </div>
+
+    <p>Flex shrink = 0 + flex basis = 100px e flex grow = 1</p>
+    <div class="flexContainer">
+        <div class="items flexShrink0EFlexBais flexGrow">A</div>
+        <div class="items flexShrink0EFlexBais flexGrow">B</div>
+        <div class="items flexShrink0EFlexBais flexGrow">Lorem ipsum dolor sit.</div>
+        <div class="items flexShrink0EFlexBais flexGrow">D</div>
+        
+    </div>
+
+    <p>Flex shrink mix + flex basis = 100px e flex grow = 1</p>
+    <div class="flexContainer">
+        <div class="items flexShrink1 flexGrow">A</div>
+        <div class="items flexShrink2 flexGrow">B</div>
+        <div class="items flexShrink2 flexGrow">Lorem ipsum dolor sit.</div>
+        <div class="items flexShrink3 flexGrow">D</div>
+        
+    </div>
+</body>
+</html>

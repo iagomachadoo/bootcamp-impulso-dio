@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos | Flex Basis</title>
+    <style>
+        p{
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .flexContainer{
+            max-width: 500px;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .items{
+            background-color: coral;
+            color: white;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .FlexBasisAuto{
+            flex-basis: auto;
+        }
+
+        .FlexBasis0{
+            flex-basis: 0;
+        }
+
+        .FlexBasis100px{
+            flex-basis: 100px;
+        }
+
+        .FlexGrow1{
+            flex-grow: 1;
+        }
+
+        .FlexGrow2{
+            flex-grow: 2;
+        }
+    </style>
+</head>
+<body>
+    <p>Flex basis = auto e flex grow = 1</p>
+    <div class="flexContainer">
+        <div class="items FlexBasisAuto FlexGrow1">A</div>
+        <div class="items FlexBasisAuto FlexGrow1">BBB</div>
+        <div class="items FlexBasisAuto FlexGrow1">C</div>
+        <div class="items FlexBasisAuto FlexGrow1">DEF</div>
+    </div>
+
+    <p>Flex basis = auto e flex grow = 2</p>
+    <div class="flexContainer">
+        <div class="items FlexBasisAuto FlexGrow2">A</div>
+        <div class="items FlexBasisAuto FlexGrow1">BBB</div>
+        <div class="items FlexBasisAuto FlexGrow1">C</div>
+        <div class="items FlexBasisAuto FlexGrow2">DEF</div>
+    </div>
+
+    <p>Flex basis = 0 e flex grow = 1</p>
+    <div class="flexContainer">
+        <div class="items FlexBasis0 FlexGrow1">A</div>
+        <div class="items FlexBasis0 FlexGrow1">BBB</div>
+        <div class="items FlexBasis0 FlexGrow1">C</div>
+        <div class="items FlexBasis0 FlexGrow1">DEF</div>
+    </div>
+
+    <p>Flex basis = 100px e flex grow = 2</p>
+    <div class="flexContainer">
+        <div class="items FlexBasis100px FlexGrow2">A</div>
+        <div class="items FlexBasis100px FlexGrow2">BBB</div>
+        <div class="items FlexBasis100px FlexGrow2">C</div>
+        <div class="items FlexBasis100px FlexGrow2">DEF</div>
+    </div>
+</body>
+</html>

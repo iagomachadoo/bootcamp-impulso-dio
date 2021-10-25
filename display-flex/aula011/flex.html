@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos | Flex</title>
+    <style>
+        p{
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 3px; 
+        }
+        
+        .flexContainer{
+            display: flex;
+            border: 1px solid black;
+            max-width: 400px;
+        }
+
+        .items{
+            background-color: brown;
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .flex1{
+            flex: 1;/*grow = 1 / shrink = 1 / basis = 0*/
+        }
+
+        .flex2{
+            flex: 2;/*grow = 2 / shrink = 1 / basis = 0*/
+        }
+
+        .width{
+            width: 200px;
+            /*min-width: 200px; o min-widht é repeitado enquanto o width não*/
+        }
+    </style>
+</head>
+<body>
+    <p>Flex 1</p>
+    <div class="flexContainer">
+        <div class="items flex1">A</div>
+        <div class="items flex1">BBB</div>
+        <div class="items flex1">C</div>
+        <div class="items flex1">DD</div>
+        <div class="items flex1">EEEE</div>
+    </div>
+
+    <p>Flex mix entre 1 e 2</p>
+    <div class="flexContainer">
+        <div class="items flex1">A</div>
+        <div class="items flex2">BBB</div>
+        <div class="items flex2">C</div>
+        <div class="items flex1">DD</div>
+        <div class="items flex1">EEEE</div>
+    </div>
+
+    <p>Width ignorado -> basis = 0</p>
+    <div class="flexContainer">
+        <div class="items flex1 width">A</div>
+        <div class="items flex1 width">BBB</div>
+        <div class="items flex1 width">C</div>
+        <div class="items flex1 width">DD</div>
+        <div class="items flex1 width">EEEE</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos | Order</title>
+    <style>
+         p{
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 3px; 
+        }
+
+        .flexContainer{
+            display: flex;
+            max-width: 350px;
+            border: 1px solid black;
+            margin-bottom: 20px;
+        }
+
+        .item{
+            flex: 1;
+            background-color: brown;
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 5px;
+        }
+
+        .order1{
+            order: 1;
+        }
+
+        .order2{
+            order: 2;
+        }
+
+        .order3{
+            order: 3;
+        }
+
+        .order4{
+            order: 4;
+        }
+
+        .order-1{
+            order: -1;
+        }
+
+        .order-2{
+            order: -2;
+        }
+
+        .order-3{
+            order: -3;
+        }
+
+        .order-4{
+            order: -4;
+        }
+
+        .column{
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>Row</h1>
+
+    <p>Order = 0 (padrão)</p>
+    <div class="flexContainer">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <p>Order de 1 a 4</p>
+    <div class="flexContainer">
+        <div class="item order4">1</div>
+        <div class="item order3">2</div>
+        <div class="item order2">3</div>
+        <div class="item order1">4</div>
+    </div>
+
+    <p>Order iguais</p>
+    <div class="flexContainer">
+        <div class="item order4">1</div>
+        <div class="item order3">2</div>
+        <div class="item order1">3</div>
+        <div class="item order1">4</div>
+    </div>
+
+    <p>Order com valores negativos</p>
+    <div class="flexContainer">
+        <div class="item order-1">1</div>
+        <div class="item order-4">2</div>
+        <div class="item order-3">3</div>
+        <div class="item order-2">4</div>
+    </div>
+
+    <h1>Column</h1>
+
+    <p>Order = 0 (padrão)</p>
+    <div class="flexContainer column">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <p>Order de 1 a 4</p>
+    <div class="flexContainer column">
+        <div class="item order4">1</div>
+        <div class="item order3">2</div>
+        <div class="item order2">3</div>
+        <div class="item order1">4</div>
+    </div>
+
+    <p>Order iguais</p>
+    <div class="flexContainer column">
+        <div class="item order4">1</div>
+        <div class="item order3">2</div>
+        <div class="item order1">3</div>
+        <div class="item order1">4</div>
+    </div>
+</body>
+</html>
